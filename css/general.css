@@ -1,30 +1,379 @@
 /* GLOBAL */
+
+body {
+  font-family: 'Open Sans', 'Arial', 'Courier New';
+  font-size: 12pt;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 18pt;
+}
+
 a{
   color: black;
 }
+
+A:hover {
+  text-decoration: underline overline;
+}
+
+img {
+  border: 0;
+}
+
+/* .cell{ border: 2px solid black; } */
+
+.elem1, .elem1 a {
+  font-size: 18pt;
+  color: red;
+  font-style: Bold;
+}
+
+.elem1 a:hover, .elem1 a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+.elem1big, .elem1big a {
+  font-size: 22pt;
+  color: red;
+  font-style: Bold;
+}
+
+.elem1big a:hover, .elem1big a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+.elem2, .elem2 a {
+  font-size: 18pt;
+  color: green;
+  font-style: Bold;
+}
+
+.elem2 a:hover, .elem2 a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+.elem2big, .elem2big a {
+  font-size: 22pt;
+  color: green;
+  font-style: Bold;
+}
+
+.elem2big a:hover, .elem2big a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+.elem3, .elem3 a {
+  font-size: 18pt;
+  color: blue;
+  font-style: Bold;
+}
+
+.elem3 a:hover, .elem3 a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+.elem3big, .elem3big a {
+  font-size: 22pt;
+  color: blue;
+  font-style: Bold;
+}
+
+.elem3big a:hover, .elem3big a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+.elem4, .elem4 a {
+  font-size: 18pt;
+  color: black;
+  font-style: Bold;
+}
+
+.elem4 a:hover, .elem4 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.elem4big, .elem4big a {
+  font-size: 22pt;
+  color: black;
+  font-style: Bold;
+}
+
+.elem4big a:hover, .elem4big a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.num {
+  font-size: 9pt;
+}
+
+.numbig {
+  font-size: 13pt;
+}
+
+.massa {
+  font-size: 8pt;
+}
+
+.massabig {
+  font-size: 12pt;
+}
+
+.elcfg {
+  font-size: 7pt;
+}
+
+.elcfgbig {
+  font-size: 11pt;
+}
+
+.capt {
+  font-size: 9pt;
+}
+
+.captbig {
+  font-size: 13pt;
+}
+
+.electr {
+  font-size: 7pt;
+  padding-bottom: 5px !important;
+}
+
+.electrbig {
+  font-size: 11pt;
+}
+
+.tup {
+  vertical-align: 0.8em;
+  font-size: 80%;
+}
+
+.tdn {
+  vertical-align: -0.8em;
+  font-size: 80%;
+}
+
+.ROH {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.elemThumb {}
+
+/* .elemItem { width: 110px; } */
+
+.elemItem {
+  width: 100%;
+  border: 2px solid black;
+  height: 90px;
+}
+
+.emptyElem {
+  border-color: transparent !important;
+}
+
+.ROH .elemItem {
+  height: 50px;
+}
+
+/* .grid-11 .col-md-1, .grid-11 .col-lg-1 { max-width: 120px; } */
+
+.grid-11 table td {
+  padding: 0 5px;
+}
+
+/* .grid-14 .col-md-1, .grid-11 .col-lg-1 { max-width: 110px; } */
+
+.grid-14 table td {
+  padding: 0 5px;
+}
+
+/* Single element page */
+
+.single_element_description__element_cell {
+  margin: 0 0 20px 0;
+  border: 2px solid black;
+  width: 180px;
+  height: 140px;
+}
+
+.single_element_description__container {
+  margin: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.single_element_description {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.single_element_description__data {
+  font-size: 14px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.single_element_description__data tr td {
+  margin: 0;
+  padding: 6px 15px 6px 0;
+  width: 50%;
+  border-color: #777;
+  border-style: solid none;
+  border-width: 1px;
+}
+
+@media screen and (max-width: 1646px) {
+  /*
+		亟仍�� �从�舒仆舒 仄亠仆亠亠 1646 仗亳从�亠仍仂于
+	*/
+  .elemItem .electr, .elemItem .electr_row {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  /*
+		亟仍�� �从�舒仆舒 仄亠仆亠亠 1390 仗亳从�亠仍仂于
+	*/
+  .elemItem .massa, .elemItem .massa_row {
+    display: none;
+  }
+  .elemItem .elcfg, .elemItem .elcfg_row {
+    display: none;
+  }
+  .elemItem .elemItem {
+    height: 65px;
+  }
+  .grid-14 .col-sm-1 {
+    max-width: 86px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  /*
+		亟仍�� �从�舒仆舒 仄亠仆亠亠 1160 仗亳从�亠仍仂于
+	*/
+  .elemItem .capt, .elemItem .capt_row {
+    display: none;
+  }
+  .grid-14 .col-sm-1 {
+    max-width: 86px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .elemItem {
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .elemItem {
+    height: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .grid-11 .col-xs-11 {
+    margin: 0 auto;
+  }
+  .grid-11 .col-sm-4 {
+    max-width: 160px;
+  }
+  .elemItem .massa, .elemItem .elcfg, .elemItem .capt {
+    display: table-cell;
+  }
+  .elemItem .massa_row, .elemItem .elcfg_row, .elemItem .capt_row, .elemItem .electr_row {
+    display: table-row;
+  }
+  .elemItem .electr {
+    display: table-cell !important;
+  }
+  .elemItem .electr_row {
+    display: table-row !important;
+  }
+  .grid-11 .col-xs-11 .elemItem, .grid-14 .col-xs-14 .elemItem {
+    width: 180px;
+    height: 150px;
+    margin: 10px auto;
+  }
+  .grid-11 .col-xs-11 .emptyElem {
+    height: auto;
+    margin: 0;
+  }
+  .grid-11 .col-xs-11 .elemItem td, .grid-14 .col-xs-14 .elemItem td {
+    font-size: 120%;
+  }
+  .grid-11 .col-xs-11 .elemItem .elem1, .grid-11 .col-xs-11 .elemItem .elem2, .grid-11 .col-xs-11 .elemItem .elem3, .grid-14 .col-xs-14 .elemItem .elem1, .grid-14 .col-xs-14 .elemItem .elem2, .grid-14 .col-xs-14 .elemItem .elem3, .grid-14 .col-xs-14 .elemItem .elem4 {
+    font-size: 150%;
+  }
+  .grid-11 .col-xs-11 .elemItem .elem1 a, .grid-11 .col-xs-11 .elemItem .elem2 a, .grid-11 .col-xs-11 .elemItem .elem3 a, .grid-14 .col-xs-14 .elemItem .elem1 a, .grid-14 .col-xs-14 .elemItem .elem2 a, .grid-14 .col-xs-14 .elemItem .elem3 a, .grid-14 .col-xs-14 .elemItem .elem4 a {
+    font-size: 150%;
+  }
+  .grid-11 .ROH .elemItem {
+    height: 40px;
+    border: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .grid-11 .col-xs-11 .elemItem .num {
+    padding: 0;
+  }
+  .grid-11 .col-xs-11 .elemItem .elem1, .grid-11 .col-xs-11 .elemItem .elem2, .grid-11 .col-xs-11 .elemItem .elem3, .grid-14 .col-xs-14 .elemItem .elem1, .grid-14 .col-xs-14 .elemItem .elem2, .grid-14 .col-xs-14 .elemItem .elem3, .grid-14 .col-xs-14 .elemItem .elem4 {
+    font-size: 100%;
+    vertical-align: middle;
+    height: 100%;
+  }
+  .grid-11 .col-xs-11 .elemItem .elem1 a, .grid-11 .col-xs-11 .elemItem .elem2 a, .grid-11 .col-xs-11 .elemItem .elem3 a, .grid-14 .col-xs-14 .elemItem .elem1 a, .grid-14 .col-xs-14 .elemItem .elem2 a, .grid-14 .col-xs-14 .elemItem .elem3 a, .grid-14 .col-xs-14 .elemItem .elem4 a {
+    font-size: 100%;
+  }
+}
+
 /* CLASS
 our palette http://www.color-hex.com/color-palette/57953
  */
-.elem-letter{
-    font-weight: bold;
+
+.elem-letter {
+  font-weight: bold;
 }
-.elemItem{
-    border: 2px solid black;
-    height: 90px;
+
+.elemItem {
+  width: 100%;
+  border: 2px solid black;
+  height: 90px;
 }
-.grid-11{
-    margin-bottom: 10px;
+
+.grid-11 {
+  margin-bottom: 10px;
 }
+
 .tup {
-    vertical-align: 0.8em;
-    font-size: 55%;
+  vertical-align: 0.8em;
+  font-size: 55%;
 }
-.yellow-block{
+
+.yellow-block {
   background-color: #fac73f;
 }
-.red-block{
+
+.red-block {
   background-color: #FA6A3F;
 }
-.green-block{
+
+.green-block {
   background-color: #b4bd68;
 }
