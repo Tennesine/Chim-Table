@@ -1,0 +1,13 @@
+/* GLOBAL */
+/* CLASS */
+.elemItem{
+    border: 2px solid black;
+    height: 90px;
+}
+.grid-11{
+    margin-bottom: 10px;
+}
+.tup {
+    vertical-align: 0.8em;
+    font-size: 55%;
+}
