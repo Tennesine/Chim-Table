@@ -1,5 +1,13 @@
 /* GLOBAL */
-/* CLASS */
+a{
+  color: black;
+}
+/* CLASS
+our palette http://www.color-hex.com/color-palette/57953
+ */
+.elem-letter{
+    font-weight: bold;
+}
 .elemItem{
     border: 2px solid black;
     height: 90px;
@@ -10,4 +18,13 @@
 .tup {
     vertical-align: 0.8em;
     font-size: 55%;
+}
+.yellow-block{
+  background-color: #fac73f;
+}
+.red-block{
+  background-color: #FA6A3F;
+}
+.green-block{
+  background-color: #b4bd68;
 }
