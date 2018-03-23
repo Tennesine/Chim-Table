@@ -8,6 +8,8 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css\bootstrap.min.css">
+  <!-- Magnific Popup core CSS file -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css\general.css">
   <!-- Icon -->
@@ -19,32 +21,54 @@
 <body>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">H - Водород</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <div id="MyModals">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">H - Водород</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          <!-- Nav tabs -->
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
-            </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <div class="modal-body">
+            <!-- Nav tabs -->
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-desc-tab" data-toggle="tab" href="#nav-desc" role="tab" aria-controls="nav-desc" aria-selected="true">Описание</a>
+                <a class="nav-item nav-link" id="nav-history-tab" data-toggle="tab" href="#nav-history" role="tab" aria-controls="nav-history" aria-selected="false">История открытия</a>
+                <a class="nav-item nav-link" id="nav-nature-tab" data-toggle="tab" href="#nav-nature" role="tab" aria-controls="nav-nature" aria-selected="false">Нахождение в природе</a>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-desc" role="tabpanel" aria-labelledby="nav-desc-tab">
+                <a class="image-link" href="img/crystal-hydrogen.png"><img src="img/crystal-hydrogen.png" class="img-thumbnail" width="200"></a>
+                <br>
+                <p>Почему светят звезды? Потому что в их недрах атомы водорода превращаются в атомы гелия. Одно только Солнце ежесекундно перерабатывает более 600 миллионов тонн водорода, производя 596 миллионов тонн гелия. Подумайте только: 600 миллионов
+                  тонн в секунду. Даже ночью!</p>
+                <p>А куда деваются еще 4 миллиона тонн? В соответствии со знаменитой формулой Эйнштейна E=mc2 они превращаются в энергию. На Землю приходится ничтожная доля этой энергии, эквивалентная примерно 1,6 килограмма водорода в секунду. И все же
+                  благодаря этому на Земле есть жизнь, и мы с вами можем любоваться восходами и закатами, нежиться на солнышке.</p>
+                <p> Нам необходим водород Солнца, однако и прямо здесь, на Земле, без него не обойтись. Соединяясь с водородом, он образует воду – океаны, реки, озера и облака. А вместе с углеродом, азотом и кислородом водород образует плоть и кровь всего
+                  живого.
+                </p>
+                <p> Водород – самый легкий газ. Он легче гелия и намного дешевле его, поэтому водородом наполнил первые дирижабли. Вы, конечно, слышали историю крушения «Гинденбурга». Так вот, люди тогда погибли не в пламени, а из-за травм, вызванных падением
+                  с высоты. Водород в некоторых отношения безопаснее бензина, которым вы заправляете автомобиль.</p>
+              </div>
+              <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">Элемент был обнаружен британским ученым Генри Кавендишем в 1766 году. Происхождение названия восходит к греческим словам «гидро» и «генов», что означает «вода» и «генератор». Еще в 1671 году Роберт Бойл (1627-1691, английский химик и физик)
+                опубликовал статью «Новые эксперименты, касающиеся отношения между пламенем и воздухом», в которой он описал реакцию между железными опилками и разбавленными кислотами. В процессе экспериментов ученый заметил, что реакция данных веществ
+                приводит к эволюции газообразного водорода («горючий раствор Марса»). Однако только в 1766 году газ был утвержден в качестве основного элемента Генри Кавендишем (1731-1810, английский химик и физик, который также открыл азот), использовавшим
+                для синтеза ртуть. Ученый охарактеризовал его как «легковоспламеняющийся воздух из металлов». Кавендиш точно описал свойства водорода, но ошибочно считал, что газ происходит от металла, а не от кислоты. Современное название химическому
+                элементу дал французский естествоиспытатель А. Л. Лавуазье. История открытия водорода (H) на этом не заканчивается. В 1931 году профессором химии Гарольдом Юри, работавшим в Чикаго (США), был обнаружен газ дейтерий. </div>
+              <div class="tab-pane fade" id="nav-nature" role="tabpanel" aria-labelledby="nav-nature-tab">Водород – самый легкий и распространённый в природе элемент. Его атом состоит всего из одного протона и одного электрона, и за это водород очень любят физики: его поведение очень точно описывается их любимыми квантово-механическими формулами.
+                Когда же дело доходит до гелия с его двумя протонами и двумя электронами, физики умывают руки, уступая место химикам. На долю водорода приходится около 92% всех атомов Вселенной. Он основная составная часть вещества звезд и межзвездного
+                газа, в виде соединений образует атмосферу многих планет. На Земле доля атомов водорода 17%, он входит в состав самого распространенного вещества - воды, в состав соединений образующих живые организмы, где доля его атомов около 50%. В
+                то же время массовая доля водорода на Земле (земная кора + гидросфера) около 1,5%
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          </div>
         </div>
       </div>
     </div>
@@ -3047,11 +3071,36 @@
     </div>
   </div>
 
-  <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <!-- Magnific Popup core JS file -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <!-- Optional JavaScript -->
+  <script>
+  $(document).ready(function() {
+
+    $('.image-link').magnificPopup({
+      type:'image',
+      closeOnContentClick: true,
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+        duration: 500, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function(openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      }
+    });});
+  </script>
 </body>
 
 </html>
