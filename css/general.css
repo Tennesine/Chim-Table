@@ -131,7 +131,7 @@ img {
 }
 
 .elcfg {
-  font-size: 7pt;
+  font-size: 10pt;
 }
 
 .elcfgbig {
@@ -157,7 +157,7 @@ img {
 
 .tup {
   vertical-align: 0.8em;
-  font-size: 80%;
+  font-size: 70%;
 }
 
 .tdn {
@@ -361,10 +361,6 @@ our palette http://www.color-hex.com/color-palette/57953
   margin-bottom: 10px;
 }
 
-.tup {
-  vertical-align: 0.8em;
-  font-size: 55%;
-}
 
 .yellow-block {
   background-color: #fac73f;
