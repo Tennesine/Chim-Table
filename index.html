@@ -42,7 +42,8 @@
             </nav>
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-desc" role="tabpanel" aria-labelledby="nav-desc-tab">
-                <a class="image-link" href="img/crystal-hydrogen.png"><img src="img/crystal-hydrogen.png" class="img-thumbnail" width="200"></a>
+                <br>
+                <a class="image-link" href="img/crystal-hydrogen.png"><img src="img/crystal-hydrogen.png" class="rounded mx-auto d-block" width="200"></a>
                 <br>
                 <p>Почему светят звезды? Потому что в их недрах атомы водорода превращаются в атомы гелия. Одно только Солнце ежесекундно перерабатывает более 600 миллионов тонн водорода, производя 596 миллионов тонн гелия. Подумайте только: 600 миллионов
                   тонн в секунду. Даже ночью!</p>
@@ -3079,27 +3080,28 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <!-- Optional JavaScript -->
   <script>
-  $(document).ready(function() {
+    $(document).ready(function() {
 
-    $('.image-link').magnificPopup({
-      type:'image',
-      closeOnContentClick: true,
-      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
-      zoom: {
-        enabled: true, // By default it's false, so don't forget to enable it
-        duration: 500, // duration of the effect, in milliseconds
-        easing: 'ease-in-out', // CSS transition easing function
+      $('.image-link').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+        zoom: {
+          enabled: true, // By default it's false, so don't forget to enable it
+          duration: 500, // duration of the effect, in milliseconds
+          easing: 'ease-in-out', // CSS transition easing function
 
-        // The "opener" function should return the element from which popup will be zoomed in
-        // and to which popup will be scaled down
-        // By defailt it looks for an image tag:
-        opener: function(openerElement) {
-          // openerElement is the element on which popup was initialized, in this case its <a> tag
-          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
-          return openerElement.is('img') ? openerElement : openerElement.find('img');
+          // The "opener" function should return the element from which popup will be zoomed in
+          // and to which popup will be scaled down
+          // By defailt it looks for an image tag:
+          opener: function(openerElement) {
+            // openerElement is the element on which popup was initialized, in this case its <a> tag
+            // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+            return openerElement.is('img') ? openerElement : openerElement.find('img');
+          }
         }
-      }
-    });});
+      });
+    });
   </script>
 </body>
 
