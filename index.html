@@ -11,8 +11,6 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css\bootstrap.min.css">
-  <!-- Magnific Popup core CSS file -->
-  <link rel="stylesheet" href="css/magnific-popup.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css\general.css">
   <!-- Icon -->
@@ -21,6 +19,7 @@
   <title>Химическая таблица</title>
 </head>
 
+<<<<<<< HEAD
 <body>
 
   <!-- Modal -->
@@ -4588,7 +4587,19 @@
 
       </div>
 
+=======
+<body class="img-bg">
+>>>>>>> 1113a045ed83e380774fe52f09c1ddcb5d18b5d5
 
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-1">Таблица менделеева!</h1>
+      <p class="lead">Данное приложение/программа разработа как учебное пособие по таблице менделеева.</p>
+      <hr class="my-4">
+      <p>Выберите интересующий вас раздел и нажмите на него.</p>
+      <p class="lead">
+        <a class="btn btn-warning btn-lg" href="table.html" role="button">Таблица</a>
+      </p>
     </div>
   </div>
 
@@ -4596,32 +4607,8 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <!-- Magnific Popup core JS file -->
-  <script src="js/jquery.magnific-popup.min.js"></script>
   <!-- Optional JavaScript -->
   <script>
-    $(document).ready(function() {
-
-      $('.image-link').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
-        zoom: {
-          enabled: true, // By default it's false, so don't forget to enable it
-          duration: 500, // duration of the effect, in milliseconds
-          easing: 'ease-in-out', // CSS transition easing function
-
-          // The "opener" function should return the element from which popup will be zoomed in
-          // and to which popup will be scaled down
-          // By defailt it looks for an image tag:
-          opener: function(openerElement) {
-            // openerElement is the element on which popup was initialized, in this case its <a> tag
-            // you don't need to add "opener" option if this code matches your needs, it's defailt one.
-            return openerElement.is('img') ? openerElement : openerElement.find('img');
-          }
-        }
-      });
-    });
   </script>
 </body>
 
