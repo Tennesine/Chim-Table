@@ -89,8 +89,8 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="form-group">
-          <label for="zd_5">В результате нескольких α- и β-распадов ядро урана <img src="img/zd/zd5_physics.svg" class="tex" style="vertical-align:-3pt">U превращается в ядро свинца <img src="img/zd/zd5_2_physics.svg" class="tex" style="vertical-align:-3pt">Pb. Определите количество α-распадов и количество β-распадов в этой реакции.</label>
-          <input type="text" class="form-control" id="zd_5" placeholder="Введите ответ"><small id="zd_5" class="form-text text-muted">В ответе запишите значения слитно без пробела.</small>
+          <label for="zd_5">Хлороводород и водород являются соответственно<br>1) простыми веществами<br>2) сложными веществами<br>3) простым и сложным веществами<br>4) сложным и простым веществами</label>
+          <input type="text" class="form-control" id="zd_5" placeholder="Введите ответ">
           <br>
         </div>
       </div>
@@ -98,8 +98,8 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="form-group">
-          <label for="zd_6">Сколько нейтронов и протонов содержится в ядре йода <img src="img/zd/zd6_physics.svg" class="tex" style="vertical-align:-3pt">?</label>
-          <input type="text" class="form-control" id="zd_6" placeholder="Введите ответ"><small id="zd_6" class="form-text text-muted">В ответе запишите значения слитно без пробела.</small>
+          <label for="zd_6">Даны оксиды: А – оксид натрия, Б – оксид кальция, В – оксид цинка. Среди них к оснóвным ок­си­дам относят:<br>1) толь­ко А<br>2) толь­ко Б<br>3) А и Б<br>4) А, Б и В</label>
+          <input type="text" class="form-control" id="zd_6" placeholder="Введите ответ">
           <br>
         </div>
       </div>
@@ -107,21 +107,26 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="form-group">
-          <label for="zd_7">Реакция деления ядра урана тепловыми нейтронами описывается уравнением: <img src="img/zd/zd7_physics.svg" class="tex" style="vertical-align:-4pt"> Определите минимальное число нейтронов x, вступающих в реакцию, и число нейтронов y, образующихся в качестве продуктов этой реакции. Ответ дайте в виде двух чисел.</label>
-          <input type="text" class="form-control" id="zd_7" placeholder="Введите ответ"><small id="zd_7" class="form-text text-muted">В ответе запишите значения слитно без пробела.</small>
+          <label for="zd_7">Больше от­ри­ца­тель­ных ионов, чем положительных, об­ра­зу­ет­ся в вод­ном рас­тво­ре при диссоциации<br>1) азотной кислоты<br>2) фосфата калия<br>3) нитрата железа(III)<br>4) сульфата аммония</label>
+          <input type="text" class="form-control" id="zd_7" placeholder="Введите ответ">
           <br>
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-6">
-        <div class="form-group">
-          <label for="zd_8">Сколько электронов вращается вокруг ядра атома<img src="img/zd/zd8_physics.svg" class="tex" style="vertical-align:-4pt"></label>
-          <input type="text" class="form-control" id="zd_8" placeholder="Введите ответ">
-          <br>
-        </div>
-      </div>
+  <div class="col-6">
+    <div class="form-group">
+      <label for="zd_8">При дис­со­ци­а­ции какой соли об­ра­зу­ет­ся боль­ше по­ло­жи­тель­ных ионов, чем отрицательных?
+        <br>1)<img src="img/zd/zd8_chemistry.svg" class="tex" style="vertical-align:-2pt">
+        <br>2)<img src="img/zd/zd8_2_chemistry.svg" class="tex" style="vertical-align:-2pt">
+        <br>3)<img src="img/zd/zd8_3_chemistry.svg" class="tex" style="vertical-align:-2pt">
+        <br>4)<img src="img/zd/zd8_4_chemistry.svg" class="tex" style="vertical-align:-2pt">
+      </label>
+      <input type="text" class="form-control" id="zd_8" placeholder="Введите ответ">
+      <br>
     </div>
+  </div>
+</div>
 
     <div class="row justify-content-center">
       <div class="col-md-auto">
@@ -185,7 +190,7 @@
         $('#zd_4').removeClass("is-valid");
         $('#zd_4').addClass("is-invalid");
       }
-      if ($('#zd_5').val() == 86) {
+      if ($('#zd_5').val() == 4) {
         $('#zd_5').removeClass("is-invalid");
         $('#zd_5').addClass("is-valid");
         r = r + 1;
@@ -193,7 +198,7 @@
         $('#zd_5').removeClass("is-valid");
         $('#zd_5').addClass("is-invalid");
       }
-      if ($('#zd_6').val() == 53123) {
+      if ($('#zd_6').val() == 3) {
         $('#zd_6').removeClass("is-invalid");
         $('#zd_6').addClass("is-valid");
         r = r + 1;
@@ -201,7 +206,7 @@
         $('#zd_6').removeClass("is-valid");
         $('#zd_6').addClass("is-invalid");
       }
-      if ($('#zd_7').val() == 13) {
+      if ($('#zd_7').val() == 3) {
         $('#zd_7').removeClass("is-invalid");
         $('#zd_7').addClass("is-valid");
         r = r + 1;
@@ -209,7 +214,7 @@
         $('#zd_7').removeClass("is-valid");
         $('#zd_7').addClass("is-invalid");
       }
-      if ($('#zd_8').val() == 39) {
+      if ($('#zd_8').val() == 2) {
         $('#zd_8').removeClass("is-invalid");
         $('#zd_8').addClass("is-valid");
         r = r + 1;
