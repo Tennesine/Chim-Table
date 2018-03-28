@@ -12,7 +12,7 @@ h1 {
   font-size: 18pt;
 }
 
-a{
+a {
   color: black;
 }
 
@@ -25,6 +25,16 @@ img {
 }
 
 /* .cell{ border: 2px solid black; } */
+
+.img-bg {
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.jumbotron {
+  margin-top: 10%;
+}
 
 .elem1, .elem1 a {
   font-size: 18pt;
@@ -361,6 +371,11 @@ our palette http://www.color-hex.com/color-palette/57953
   margin-bottom: 10px;
 }
 
+.btn-yellow {
+  color: #fff;
+    background-color: #fac73f;
+    border-color: #fac73f;
+}
 
 .yellow-block {
   background-color: #fac73f;
