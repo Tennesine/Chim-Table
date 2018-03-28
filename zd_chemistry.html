@@ -40,8 +40,8 @@
           Задания ОГЭ/ЕГЭ
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Задания ЕГЭ по физике</a>
-            <a class="dropdown-item" href="zd_chemistry.html">Задания ОГЭ по химии</a>
+            <a class="dropdown-item" href="zd_physics.html">Задания ЕГЭ по физике</a>
+            <a class="dropdown-item" href="#">Задания ОГЭ по химии</a>
           </div>
         </li>
       </ul>
@@ -53,7 +53,7 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="form-group">
-          <label for="zd_1">Каков заряд ядра <img src="img/zd/zd1_physics.svg" class="tex" style="vertical-align:-3pt"> (в единицах элементарного заряда)?</label>
+          <label for="zd_1">Пять электронов находятся во внешнем электронном слое атома:<br>1)бора<br>2)стронция<br>3)фосфора<br>4)неона</label>
           <input type="text" class="form-control" id="zd_1" placeholder="Введите ответ">
           <br>
         </div>
@@ -62,7 +62,7 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="form-group">
-          <label for="zd_2">Во сколько раз число протонов в ядре изотопа плутония <img src="img/zd/zd2_physics.svg" class="tex" style="vertical-align:-3pt"> превышает число нуклонов в ядре изотопа ванадия <img src="img/zd/zd2_2_physics.svg" class="tex" style="vertical-align:-3pt">?</label>
+          <label for="zd_2">На приведённом рисунке изображена модель атома химического элемента: <br>1) 2-го периода VIIIA группы<br>2) 2-го периода VIA группы<br>3) 3-го периода VIA группы<br>4) 3-го периода VIIIA группы<img class="rounded mx-auto d-block" src="img\zd\zd2_chemistry.png"></label>
           <input type="text" class="form-control" id="zd_2" placeholder="Введите ответ">
           <br>
         </div>
@@ -71,7 +71,7 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="form-group">
-          <label for="zd_3">На рисунке представлен фрагмент Периодической системы элементов Д. И. Менделеева. <img src="img/zd/zd3_physics.png" style="margin:10px auto;display:block">Укажите число электронов в атоме бора В.</label>
+          <label for="zd_3">Элементы фтор и хлор имеют одинаковое<br>1) общее число электронов<br>2) число завершённых энер­ге­ти­че­ских уровней<br>3) число элек­тро­нов на внеш­нем уровне<br>4) число про­то­нов в ядре</label>
           <input type="text" class="form-control" id="zd_3" placeholder="Введите ответ">
           <br>
         </div>
@@ -80,7 +80,7 @@
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="form-group">
-          <label for="zd_4">Сколько электронов вращается вокруг ядра атома <img src="img/zd/zd4_physics.svg" class="tex" style="vertical-align:-3pt"></label>
+          <label for="zd_4">Химическому эле­мен­ту 2-го пе­ри­о­да VIA-группы со­от­вет­ству­ет схема рас­пре­де­ле­ния электронов<img class="rounded mx-auto d-block" src="img\zd\zd4_chemistry.png"></label>
           <input type="text" class="form-control" id="zd_4" placeholder="Введите ответ">
           <br>
         </div>
@@ -153,7 +153,7 @@
   <script>
     document.getElementById('check-btn').onclick = function() {
       var r = 0;
-      if ($('#zd_1').val() == 5) {
+      if ($('#zd_1').val() == 3) {
         $('#zd_1').removeClass("is-invalid");
         $('#zd_1').addClass("is-valid");
         r = r + 1;
@@ -169,7 +169,7 @@
         $('#zd_2').removeClass("is-valid");
         $('#zd_2').addClass("is-invalid");
       }
-      if ($('#zd_3').val() == 5) {
+      if ($('#zd_3').val() == 3) {
         $('#zd_3').removeClass("is-invalid");
         $('#zd_3').addClass("is-valid");
         r = r + 1;
@@ -177,7 +177,7 @@
         $('#zd_3').removeClass("is-valid");
         $('#zd_3').addClass("is-invalid");
       }
-      if ($('#zd_4').val() == 30) {
+      if ($('#zd_4').val() == 4) {
         $('#zd_4').removeClass("is-invalid");
         $('#zd_4').addClass("is-valid");
         r = r + 1;
