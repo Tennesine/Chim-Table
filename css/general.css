@@ -357,6 +357,10 @@ img {
 our palette http://www.color-hex.com/color-palette/57953
  */
 
+.bg-clear {
+  background-color: #e9ecef00;
+}
+
 .elem-letter {
   font-weight: bold;
 }
