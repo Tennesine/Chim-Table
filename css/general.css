@@ -29,7 +29,7 @@ img {
 .img-bg {
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  -webkit-background-size: cover;
 }
 
 .jumbotron {
@@ -356,6 +356,10 @@ img {
 /* CLASS
 our palette http://www.color-hex.com/color-palette/57953
  */
+
+.col-pad {
+  padding: 2px;
+}
 
 .bg-clear {
   background-color: #e9ecef00;
