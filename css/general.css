@@ -365,12 +365,6 @@ our palette http://www.color-hex.com/color-palette/57953
   font-weight: bold;
 }
 
-.elemItem {
-  width: 100%;
-  border: 2px solid black;
-  height: 90px;
-}
-
 .grid-11 {
   margin-bottom: 10px;
 }
