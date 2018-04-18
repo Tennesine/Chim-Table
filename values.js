@@ -8,6 +8,7 @@ const values = {
     "img":"img5"
   },
   "helium":{
+    "label":"He - Гелий",
     "desc":"text6",
     "history":"Text7",
     "nature":"text8",
