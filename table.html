@@ -20,18 +20,23 @@
 
   <title>Химическая таблица</title>
 
-  <!-- Подключаем значения -->
-  <script src="values.js"></script>
-
   <!-- Меня значение при клике -->
   <script>
+    var editor_code='<br><div class="btn-toolbar"data-role="editor-toolbar"data-target="#editor"><div class="btn-group mr-2"><a class="btn btn-outline-dark"data-edit="bold"title=""data-original-title="Bold (Ctrl/Cmd+B)"><i class="material-icons">format_bold</i></a><a class="btn btn-outline-dark"data-edit="italic"title=""data-original-title="Italic (Ctrl/Cmd+I)"><i class="material-icons">format_italic</i></a><a class="btn btn-outline-dark"data-edit="strikethrough"title=""data-original-title="Strikethrough"><i class="material-icons">format_strikethrough</i></a><a class="btn btn-outline-dark"data-edit="underline"title=""data-original-title="Underline (Ctrl/Cmd+U)"><i class="material-icons">format_underlined</i></a></div><div class="btn-group mr-2"><a class="btn btn-outline-dark"data-edit="insertunorderedlist"title=""data-original-title="Bullet list"><i class="material-icons">format_list_bulleted</i><\/a><a class="btn btn-outline-dark"data-edit="insertorderedlist"title=""data-original-title="Number list"><i class="material-icons">format_list_numbered</i></a><a class="btn btn-outline-dark"data-edit="outdent"title=""data-original-title="Reduce indent (Shift+Tab)"><i class="material-icons">format_indent_decrease</i></a><a class="btn btn-outline-dark"data-edit="indent"title=""data-original-title="Indent (Tab)"><i class="material-icons">format_indent_increase</i></a></div><div class="btn-group mr-2"><a class="btn btn-outline-dark"data-edit="justifyleft"title=""data-original-title="Align Left (Ctrl/Cmd+L)"><i class="material-icons">format_align_left</i></a><a class="btn btn-outline-dark"data-edit="justifycenter"title=""data-original-title="Center (Ctrl/Cmd+E)"><i class="material-icons">format_align_center</i></a><a class="btn btn-outline-dark"data-edit="justifyright"title=""data-original-title="Align Right (Ctrl/Cmd+R)"><i class="material-icons">format_align_right</i></a><a class="btn btn-outline-dark"data-edit="justifyfull"title=""data-original-title="Justify (Ctrl/Cmd+J)"><i class="material-icons">format_align_justify</i></a></div><div class="mr-2"><a class="btn btn-outline-dark img-input-button"title=""id="pictureBtn"data-original-title="Insert picture (or just drag &amp; drop)"><input type="file"data-role="magic-overlay"data-target="#pictureBtn"data-edit="insertImage"style="opacity: 0;position: absolute;margin-left: -13px;width: 48px;height: 30px;"><i class="material-icons">insert_photo</i></a></div><div class="btn-group mr-2"><a class="btn btn-outline-dark"data-edit="undo"title=""data-original-title="Undo (Ctrl/Cmd+Z)"><i class="material-icons">undo</i></a><a class="btn btn-outline-dark"data-edit="redo"title=""data-original-title="Redo (Ctrl/Cmd+Y)"><i class="material-icons">redo</i></a></div><input type="text"data-edit="inserttext"id="voiceBtn"x-webkit-speech=""style="display: none;"></div><div class="form-control"id="editor"contenteditable="true"rows="8"></div><br>';
+
     function moreinfo(name) {
       $('#label').html(values[name].label);
-      $('#desc').html(values[name].desc);
-      $('#history').html(values[name].history);
-      $('#nature').html(values[name].nature);
-      $('#use').html(values[name].use);
-      $('#img').html(values[name].img);
+      $('#desc').html(editor_code);
+      $('#history').html(editor_code);
+      $('#nature').html(editor_code);
+      $('#use').html(editor_code);
+      $('#img').html(editor_code);
+      $('#desc > #editor').html(values[name].desc);
+      $('#history > #editor').html(values[name].history);
+      $('#nature > #editor').html(values[name].nature);
+      $('#use > #editor').html(values[name].use);
+      $('#img > #editor').html(values[name].img);
+      $('#editor').wysiwyg();
       $('#table-modal').modal('show');
     }
   </script>
@@ -39,48 +44,13 @@
 
 <body>
 
-  <!-- Modal -->
-  <div id="MyModals">
-    <!-- table-history -->
-    <div class="modal fade" id="table-historyModal" tabindex="-1" role="dialog" aria-labelledby="table-historyModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="table-historyModalLabel">История таблицы</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          </div>
-          <div class="modal-body">
-            <a class="image-link" href="img/Medeleeff_by_repin.png"><img src="img/Medeleeff_by_repin.png" class="rounded mx-auto d-block" width="200"></a>
-            <p class="font-italic text-center">Д. И. Менделеев. Портрет работы Ильи Репина (1885)</p>
-            <p>Размышляя над проблемой систематизации химических элементов, Д.И. Менделеев опирался на труды ученых-предшественников. Он также группировал элементы по сходству свойств и располагал их в группах по возрастанию относительной атомной массы.
-              Эти группы он сопоставлял друг с другом.</p>
-            <p>В XIX B. в науке господствовало атомно-молекулярное учение. Согласно этому учению, атомы каждого вида (элемента) отличаются от других свойствами, размерами, массой. До Менделеева ученые сравнивали элементы по какому-либо одному признаку: либо
-              по химическим свойствам, либо по относительной атомной массе, либо по валентности. Д.И.Менделеев для классификации элементов использовал не один, а два признака – относительную атомную массу и химические свойства простых веществ и соединения
-              химических элементов. В результате М.И Менделеев открыл закон природы – периодический закон, систематизирующий химические элементы.</p>
-            <p>Суть периодического закона открытого Д.И.Менделеевым в 1869 году. Свойства веществ, а также состав и свойства соединений химических элементов находятся в периодической зависимости от относительной атомной массы. Д.И.Менделеев выявил естественную
-              систему химических элементов, которая отображена в таблице.
-            </p>
-            <p>С тех пор как ученые выявили физический смысл порядкового номера элемента (порядковый номер химического элемента численно равен заряду ядра его атома), периодический закон формулируют так: Свойства простых веществ, а также состав и свойства
-              соединений химических элементов находятся в периодической зависимости от заряда ядра атома.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <!-- Modals -->
     <div class="modal fade" id="table-modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="label">H - Водород</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+            <h5 class="modal-title" id="label"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
             <!-- Nav tabs -->
@@ -94,53 +64,15 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="desc" role="tabpanel" aria-labelledby="desc-tab">
-                <br>
-                <a class="image-link" href="img/crystal-hydrogen.png"><img src="img/crystal-hydrogen.png" class="rounded mx-auto d-block" width="200"></a>
-                <p class="font-weight-bold">
-                  <br> Атомная масса: 1, 00794
-                  <br> Плотность: 0,0000899
-                  <br>Атомный радиус: 53 пм</p>
-                <p>Почему светят звезды? Потому что в их недрах атомы водорода превращаются в атомы гелия. Одно только Солнце ежесекундно перерабатывает более 600 миллионов тонн водорода, производя 596 миллионов тонн гелия. Подумайте только: 600 миллионов
-                  тонн в секунду. Даже ночью!</p>
-                <p>А куда деваются еще 4 миллиона тонн? В соответствии со знаменитой формулой Эйнштейна E=mc2 они превращаются в энергию. На Землю приходится ничтожная доля этой энергии, эквивалентная примерно 1,6 килограмма водорода в секунду. И все же
-                  благодаря этому на Земле есть жизнь, и мы с вами можем любоваться восходами и закатами, нежиться на солнышке.</p>
-                <p> Нам необходим водород Солнца, однако и прямо здесь, на Земле, без него не обойтись. Соединяясь с водородом, он образует воду – океаны, реки, озера и облака. А вместе с углеродом, азотом и кислородом водород образует плоть и кровь всего
-                  живого.
-                </p>
-                <p> Водород – самый легкий газ. Он легче гелия и намного дешевле его, поэтому водородом наполнил первые дирижабли. Вы, конечно, слышали историю крушения «Гинденбурга». Так вот, люди тогда погибли не в пламени, а из-за травм, вызванных падением
-                  с высоты. Водород в некоторых отношения безопаснее бензина, которым вы заправляете автомобиль.</p>
+              <div class="tab-pane fade show active"id="desc"role="tabpanel"aria-labelledby="desc-tab">s
               </div>
-              <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab"></div>
+              <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
+              </div>
               <div class="tab-pane fade" id="nature" role="tabpanel" aria-labelledby="nature-tab">
-                <br>
-                <p>Водород – самый легкий и распространённый в природе элемент. Его атом состоит всего из одного протона и одного электрона, и за это водород очень любят физики: его поведение очень точно описывается их любимыми квантово-механическими формулами.
-                  Когда же дело доходит до гелия с его двумя протонами и двумя электронами, физики умывают руки, уступая место химикам.</p>
-                <p> На долю водорода приходится около 92% всех атомов Вселенной. Он основная составная часть вещества звезд и межзвездного газа, в виде соединений образует атмосферу многих планет. На Земле доля атомов водорода 17%, он входит в состав самого
-                  распространенного вещества - воды, в состав соединений образующих живые организмы, где доля его атомов около 50%. В то же время массовая доля водорода на Земле (земная кора + гидросфера) около 1,5%</p>
               </div>
               <div class="tab-pane fade" id="use" role="tabpanel" aria-labelledby="use-tab">
-                <p><br>Атомарный водород используется для атомно-водородной сварки. Жидкий водород - один из видов ракетного топлива. В водородно-кислородных топливных элементах водород используется для непосредственного преобразования энергии химической
-                  реакции в электрическую. Как восстановитель при получении некоторых металлов, для получения твердых жиров гидрированием растительных масел. В химической промышленности - получение аммиака, хлороводорода и др. Пероксид водорода: 3%-ный
-                  раствор применяют в медицине, косметологии, в промышленности для отбеливания соломы, перьев, клея, мехов, кожи и т.д., 60%-ный раствор применяют для отбеливания жиров и масел. Сильно концентрированные растворы (85-90%) в смеси с некоторыми
-                  горючими веществами применяются для получения взрывчатых смесей, как окислитель в ракетных и торпедных двигателях.</p>
-                <p>Как восстановитель при получении некоторых металлов, для получения твердых жиров гидрированием растительных масел. В химической промышленности - получение аммиака, хлороводорода и др.
-                </p>
-                <p>Пероксид водорода: 3%-ный раствор применяют в медицине, косметологии, в промышленности для отбеливания соломы, перьев, клея, мехов, кожи и т.д., 60%-ный раствор применяют для отбеливания жиров и масел. Сильно концентрированные растворы
-                  (85-90%) в смеси с некоторыми горючими веществами применяются для получения взрывчатых смесей, как окислитель в ракетных и торпедных двигателях.</p>
-
               </div>
               <div class="tab-pane fade" id="img" role="tabpanel" aria-labelledby="img-tab">
-                <br>
-                <a class="image-link" href="img/state-hydrogen.png"><img src="img/state-hydrogen.png" class="rounded mx-auto d-block" width="200"></a>
-                <p class="font-italic text-center">Состояние вещества.</p>
-                <br>
-                <a class="image-link" href="img/spectrum-hydrogen.png"><img src="img/spectrum-hydrogen.png" class="rounded mx-auto d-block" width="200"></a>
-                <p class="font-italic text-center">Спектр излучения атома.</p>
-                <br>
-                <a class="image-link" href="img/orbitals-hydrogen.png"><img src="img/orbitals-hydrogen.png" class="rounded mx-auto d-block" width="200"></a>
-                <p class="font-italic text-center">Заполненные электронные орбитали.</p>
-                <br>
               </div>
             </div>
           </div>
@@ -150,8 +82,6 @@
         </div>
       </div>
     </div>
-
-  </div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -315,6 +245,12 @@
   <script src="js/bootstrap.min.js"></script>
   <!-- Magnific Popup core JS file -->
   <script src="js/jquery.magnific-popup.min.js"></script>
+  <!-- HotKeys -->
+  <script src="js/jquery.hotkeys.js"></script>
+  <!-- Text editor -->
+  <script src="js/bootstrap-wysiwyg.js"></script>
+  <!-- Подключаем значения таблицы -->
+  <script src="values.js"></script>
   <!-- Optional JavaScript -->
   <script>
     function parseUrlQuery() {

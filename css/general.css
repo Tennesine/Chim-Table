@@ -1,3 +1,15 @@
+/* HEAD */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(fonts/MaterialIcons-Regular.woff2) format('woff2'),
+    url(fonts/MaterialIcons-Regular.woff) format('woff'),
+    url(fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
 /* GLOBAL */
 
 body {
@@ -389,4 +401,36 @@ our palette http://www.color-hex.com/color-palette/57953
 
 .green-block {
   background-color: #b4bd68;
+}
+
+/* ICONS STYLE */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+}
+
+/* CUSTOM STYLE */
+ #editor {
+   margin-top: 15px;
+   height: auto;
+ }
+.btn-outline-dark:hover {
+  color: #fff!important;
+}
+.btn-toolbar .btn{
+  line-height: 1;
 }
