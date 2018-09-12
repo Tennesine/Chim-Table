@@ -41,6 +41,7 @@
 					args = commandArr.join(' ') + (valueArg || '');
 				document.execCommand(command, 0, args);
 				updateToolbar();
+				$('#editor').trigger('addImg');
 			},
 			bindHotkeys = function (hotKeys) {
 				$.each(hotKeys, function (hotkey, command) {

@@ -38,6 +38,15 @@
       $('#img > #editor').html(values[name].img);
       $('#editor').wysiwyg();
       $('#table-modal').modal('show');
+
+      //Замена стилей картинки на magnific в модальном окне
+      $('#editor').on('addImg', function(){
+        $('#editor > img').addClass('rounded mx-auto d-block');
+        $('#editor > img').width(200);
+        var src = $('#editor > img').attr('src');
+        $('#editor > img').wrap('<a class="image-link" href="${src}"></a>');
+      });
+
     }
   </script>
 </head>
@@ -64,7 +73,7 @@
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active"id="desc"role="tabpanel"aria-labelledby="desc-tab">s
+              <div class="tab-pane fade show active"id="desc"role="tabpanel"aria-labelledby="desc-tab">
               </div>
               <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
               </div>
