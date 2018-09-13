@@ -1,23 +1,28 @@
 var values;
 var temp_values = JSON.parse(localStorage.getItem("values"));
 if (temp_values) {
-  alert('Я взял черновик!');
+  console.log('Я взял черновик!');
   values = temp_values;
 
 } else {
   //Делаем запрос на сервер с проверкой данных таблицы
-  $.ajax({
+DownloadActualTable();
+}
+
+function DownloadActualTable() {
+   $.ajax({
     type: "GET",
     url: "http://belka-home.baev.msk.ru/chim-table/",
     dataType: "json",
     success: function(site_values){
-      alert("Прибыли данные!");
-      console.log(site_values);
+      console.log("Прибыли данные!");
       values = site_values;
       localStorage.setItem("values", JSON.stringify(values));
+      $('#cloudbtn').html('cloud_queue');
+      $('#cloudbtn').css("color", '#28a745');
     },
     error: function(){
-      alert("Данных нету(");
+      console.log("Данных нету(");
       values = {
         "hydrogen":{
           "label":"H - Водород",
@@ -36,6 +41,8 @@ if (temp_values) {
           "img":"img10"
         }
       }
+      $('#cloudbtn').html('cloud_off');
+      $('#cloudbtn').css("color", '#dc3545');
     }
   });
-}
+};

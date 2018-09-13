@@ -434,3 +434,6 @@ our palette http://www.color-hex.com/color-palette/57953
 .btn-toolbar .btn{
   line-height: 1;
 }
+#table-modal{
+  background-color: #00000099;
+}
