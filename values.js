@@ -1,4 +1,5 @@
 var values;
+var counter = 0;
 var temp_values = JSON.parse(localStorage.getItem("values"));
 if (temp_values) {
   console.log('Я взял черновик!');
@@ -11,8 +12,9 @@ DownloadActualTable();
 
 function DownloadActualTable() {
    $.ajax({
-    type: "GET",
+    type: "POST",
     url: "http://belka-home.baev.msk.ru/chim-table/",
+    data: "values=null",
     dataType: "json",
     success: function(site_values){
       console.log("Прибыли данные!");
@@ -46,3 +48,32 @@ function DownloadActualTable() {
     }
   });
 };
+
+  //Функция загрузки данных на сервер
+  function UploadDataToServer(data) {
+
+    counter = counter + 1;
+    console.log('Сейчас вы вызвали UploadDataToServer = ' + counter + ' раз(а)');
+
+    $.ajax({
+      type: "POST",
+      url: "http://belka-home.baev.msk.ru/chim-table/",
+      data: "values=" + JSON.stringify(data),
+      success: function(msg){
+        console.log("Прибыли данные: " + msg );
+        $('#cloudbtn').html('cloud_queue');
+        $('#cloudbtn').css("color", '#28a745');
+        $('#WarningSaveToCloud').remove();
+      },
+      error: function(){
+        console.log('Fail :((');
+        if(($('#WarningSaveToCloud').is('.btn')) == 0) {
+            $('#cloudbtn').after('<button type="button" id="WarningSaveToCloud" class="btn btn-warning btn-small" data-toggle="tooltip" data-html="true" title="" data-original-title="При загрузке данных в облако произошла ошибка...<br>Проверьте свое интернет соединение и попробуйте вновь, если ошибка повториться пишите @Ningaro">Ошибка</button>');
+        }
+        $('#cloudbtn').css("color", '#dc3545');
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+      }
+    });
+  };
