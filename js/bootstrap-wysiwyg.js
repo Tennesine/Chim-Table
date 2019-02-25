@@ -41,7 +41,6 @@
 					args = commandArr.join(' ') + (valueArg || '');
 				document.execCommand(command, 0, args);
 				updateToolbar();
-				$('#editor').trigger('addImg');
 			},
 			bindHotkeys = function (hotKeys) {
 				$.each(hotKeys, function (hotkey, command) {
@@ -178,7 +177,15 @@
 	};
 	$.fn.wysiwyg.defaults = {
 		hotKeys: {
+			'ctrl+b meta+b': 'bold',
+			'ctrl+i meta+i': 'italic',
+			'ctrl+u meta+u': 'underline',
 			'ctrl+z meta+z': 'undo',
+			'ctrl+y meta+y meta+shift+z': 'redo',
+			'ctrl+l meta+l': 'justifyleft',
+			'ctrl+r meta+r': 'justifyright',
+			'ctrl+e meta+e': 'justifycenter',
+			'ctrl+j meta+j': 'justifyfull',
 			'shift+tab': 'outdent',
 			'tab': 'indent'
 		},

@@ -38,6 +38,10 @@ img {
 
 /* .cell{ border: 2px solid black; } */
 
+.navbar-collapse {
+  padding-top: 0.7em;
+}
+
 .img-bg {
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
@@ -402,6 +406,12 @@ our palette http://www.color-hex.com/color-palette/57953
 .green-block {
   background-color: #b4bd68;
 }
+
+.pink-block {
+  background-color: #bd68ba;
+  margin-top: 10px
+}
+
 
 /* ICONS STYLE */
 .material-icons {
