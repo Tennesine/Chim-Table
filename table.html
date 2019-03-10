@@ -25,6 +25,12 @@
     var editor_code = '<br><div id="textplace"></div><br>';
                 var activeElem;
 
+                function ErrorLoadImg(img) {
+                  $(img).hide();
+                  $(img).removeClass('d-block');
+                  $(img).parent().after( '<p class="text-center"><small>Информация отсутствует</small></p>' );
+                }
+
                 function moreInfoToEdit(name) {
 
                                 $('#label').html(values[name].label);
@@ -57,6 +63,7 @@
                                   $('.image-state').attr('href','img/state-'+name+'.png');
                                   $('.image-state > .rounded').attr('src','img/state-'+name+'.png');
 
+
                                 $('.image-link').magnificPopup({
                                   type: 'image',
                                   closeOnContentClick: true,
@@ -76,6 +83,8 @@
                                   }
                                 });
                                 $('#table-modal').modal('show');
+                                //Проверка картинок на загрузку
+
                                 activeElem = name;
                 }
         </script>
@@ -3170,8 +3179,7 @@
 
       </div>
 
-      <div class="col-xs-11 col-sm-1 col-md-1 col-lg-1" onclick="moreInfoToEdit('Nihonium
-');">
+      <div class="col-xs-11 col-sm-1 col-md-1 col-lg-1" onclick="moreInfoToEdit('Nihonium');">
 
         <table border="0" class="elemItem red-block">
           <tbody>
