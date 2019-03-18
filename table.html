@@ -18,7 +18,7 @@
   <!-- Icon -->
   <link rel="shortcut icon" href="img\chemistry-table.png" type="image/png">
 
-  <title>v0.2.1 Chim-Table</title>
+  <title>v0.2.3 Chim-Table</title>
 
   <!-- Меня значение при клике -->
   <script>
@@ -157,7 +157,12 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" id="ModalCloseBtn" data-dismiss="modal">Закрыть</button>
+          <div class="col">
+            <button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>
+          </div>
+          <div class="col text-right">
+            <button type="button" class="btn btn-secondary" id="ModalCloseBtn" data-dismiss="modal">Закрыть</button>
+          </div>
         </div>
       </div>
     </div>
@@ -4333,6 +4338,8 @@
   <script src="js/jquery.hotkeys.js"></script>
   <!-- Text editor -->
   <script src="js/bootstrap-wysiwyg.js"></script>
+  <!-- Подключаем фикс Google Voice -->
+  <script src="js/speech.js"></script>
   <!-- Подключаем значения таблицы -->
   <script src="values.js"></script>
   <!-- Optional JavaScript -->
@@ -4349,6 +4356,39 @@
       // это список с именами всех параметров в GET-запросе к странице
       return data;
     }
+
+    //функция Text to Speech
+    function functionName() {
+
+    }
+    function stopReading(text) {
+        window.speechSynthesis.cancel();
+        $(text).parent().html('<button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>');
+    };
+    function readText(text) {
+
+      var msg = new SpeechSynthesisUtterance();
+      var voices = window.speechSynthesis.getVoices();
+      msg.voice = voices[0]; // Note: some voices don't support altering params
+      msg.rate = 1.6; // 0.1 to 10
+      msg.pitch = 0; //0 to 2
+      msg.text = $('.active #textplace').text();
+
+      msg.onend = function() {
+        console.log(`Finished in  ${event.elapsedTime} seconds. Text "${msg.text}"`);
+        $('[onclick = "stopReading(this);"]').parent().html('<button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>');
+      };
+
+      $('#table-modal').on('hidden.bs.modal', function () {
+        window.speechSynthesis.cancel();
+        $('[onclick = "stopReading(this);"]').parent().html('<button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>');
+      });
+
+      speechSynthesis.speak(msg);
+      $(text).parent().html('<button type="button" class="btn btn-light float-left" onclick="stopReading(this);"><img src="img/stop-speech.svg"></button>');
+
+    };
+
     $(document).ready(function() {
       params = parseUrlQuery();
       if (params['table-history']) {
