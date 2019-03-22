@@ -4365,9 +4365,6 @@
     }
 
     //функция Text to Speech
-    function functionName() {
-
-    }
     function stopReading(text) {
         window.speechSynthesis.cancel();
         $(text).parent().html('<button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>');
@@ -4377,7 +4374,7 @@
       var msg = new SpeechSynthesisUtterance();
       var voices = window.speechSynthesis.getVoices();
       msg.voice = voices[0]; // Note: some voices don't support altering params
-      msg.rate = 2; // 0.1 to 10
+      msg.rate = 1.5; // 0.1 to 10
       msg.pitch = 0; //0 to 2
       msg.text = $('.active #textplace').text();
 

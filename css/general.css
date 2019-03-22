@@ -10,6 +10,45 @@
     url(fonts/MaterialIcons-Regular.ttf) format('truetype');
 }
 
+/* Responsive typography */
+.display-2 {
+  font-size: 4rem;
+}
+
+.display-4 {
+  font-size: 2rem;
+}
+
+@include media-breakpoint-up(sm) {
+  .display-2 {
+    font-size: 4.2rem;
+  }
+
+  .display-4 {
+    font-size: 2.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .display-2 {
+    font-size: 4.4rem;
+  }
+
+  .display-4 {
+    font-size: 2.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .display-2 {
+    font-size: 4.6rem;
+  }
+
+  .display-4 {
+    font-size: 2.6rem;
+  }
+}
+
 /* GLOBAL */
 
 body {
@@ -379,6 +418,7 @@ our palette http://www.color-hex.com/color-palette/57953
 
 .bg-clear {
   background-color: #e9ecef00;
+  box-shadow: 5px 2px 20px 1px black;
 }
 
 .elem-letter {
