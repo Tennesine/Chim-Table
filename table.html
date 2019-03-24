@@ -108,6 +108,7 @@
         <div class="modal-body">
           <a class="image-link" href="img/Medeleeff_by_repin.png"><img src="img/Medeleeff_by_repin.png" class="rounded mx-auto d-block" width="200">
           </a>
+          <div id="textplace">
           <p class="font-italic text-center">Д. И. Менделеев. Портрет работы Ильи Репина (1885)</p>
           <p>Размышляя над проблемой систематизации химических элементов, Д.И. Менделеев опирался на труды ученых-предшественников. Он также группировал элементы по сходству свойств и располагал их в группах по возрастанию относительной атомной
             массы. Эти группы он сопоставлял друг с другом.</p>
@@ -121,8 +122,14 @@
             свойства соединений химических элементов находятся в периодической зависимости от заряда ядра атома.
           </p>
         </div>
+        </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <div class="col">
+            <button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>
+          </div>
+          <div class="col text-right">
+            <button type="button" class="btn btn-secondary" id="ModalCloseBtn" data-dismiss="modal">Закрыть</button>
+          </div>
         </div>
       </div>
     </div>
@@ -4373,10 +4380,15 @@
 
       var msg = new SpeechSynthesisUtterance();
       var voices = window.speechSynthesis.getVoices();
+      if ($('.active #textplace').text() == '') {
+        var ttr = $('#textplace').text();
+      } else {
+        var ttr = $('.active #textplace').text();
+      }
       msg.voice = voices[0]; // Note: some voices don't support altering params
       msg.rate = 1.5; // 0.1 to 10
       msg.pitch = 0; //0 to 2
-      msg.text = $('.active #textplace').text();
+      msg.text = ttr;
 
       msg.onend = function() {
         console.log(`Finished in  ${event.elapsedTime} seconds. Text "${msg.text}"`);
@@ -4384,6 +4396,11 @@
       };
 
       $('#table-modal').on('hidden.bs.modal', function () {
+        window.speechSynthesis.cancel();
+        $('[onclick = "stopReading(this);"]').parent().html('<button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>');
+      });
+
+      $('#table-historyModal').on('hidden.bs.modal', function () {
         window.speechSynthesis.cancel();
         $('[onclick = "stopReading(this);"]').parent().html('<button type="button" class="btn btn-light float-left" onclick="readText(this);"><img src="img/speech.svg"></button>');
       });
